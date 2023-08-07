@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GitHub Analyzer</title>
+</head>
+<body>
+    <h1>GitHub Analyzer</h1>
+    <form method="post" action="{% url 'analyze_repository' %}">
+        {% csrf_token %}
+        <input type="text" name="repository_link" placeholder="Enter GitHub repository link">
+        <button type="submit">Analyze</button>
+    </form>
+</body>
+</html>
